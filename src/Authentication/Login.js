@@ -21,7 +21,7 @@ const handleSubmit = (values, setSubmitting, resetForm) => {
 };
 
 export const Login = () => (
-    <div className='login-div'>
+    <div className='panel-div'>
             <Formik
                 initialValues={{email: '', password: ''}}
                 validationSchema={validationSchema}
@@ -39,7 +39,7 @@ export const Login = () => (
                     <Form onSubmit={handleSubmit}>
                         <div className='row'>
                             <div className='row center-align'>
-                                <h5>Sign in</h5>
+                                <h5>Login</h5>
                             </div>
                         </div>
 
@@ -61,7 +61,7 @@ export const Login = () => (
 
                         <div className='row'>
                             <div className='input-field col s12'>
-                                <label htmlFor='password'>Password</label>
+                                <label htmlFor='password'>Senha</label>
                                 <input
                                     className='validate'
                                     type='password'
@@ -71,17 +71,17 @@ export const Login = () => (
                                     onBlur={handleBlur}
                                     value={values.password}
                                 />
-                                <div><a href='#'><b>Forgot password?</b></a></div>
+                                <div><a href='#'><b>Esqueceu sua senha?</b></a></div>
                                 {errors.password && touched.password && <div>{errors.password}</div>}
                             </div>
                         </div>
 
                         <div className='row'></div>
                         <div className='row'>
-                            <div className='col s6'><a href='#'>Create account</a></div>
+                            <div className='col s6'><a href='#'>Criar conta</a></div>
                             <div className='col s6 right-align'>
                                 <button
-                                    className="waves-effect waves-light btn btn-primary"
+                                    className="btn btn-primary"
                                     type="submit"
                                     disabled={isSubmitting}>Login
                                 </button>

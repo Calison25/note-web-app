@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import Login from './Authentication/Login';
 import './assets/css/default.css';
+import Register from "./Authentication/Register";
+import Note from "./Note/Note";
 
-class App extends Component {
+class Root extends Component {
   render() {
     return (
       <div className="container">
-          <Login/>
+          {/*<Login/>*/}
+          {/*<Register/>*/}
+          <Note/>
       </div>
     );
   }
 }
 
-export default App;
+export default Root;
