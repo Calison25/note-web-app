@@ -21,56 +21,75 @@ const handleSubmit = (values, setSubmitting, resetForm) => {
 };
 
 export const Login = () => (
-    <div>
-        <h1>Sign In</h1>
-        <Formik
-            initialValues={{email: '', password: ''}}
-            validationSchema={validationSchema}
-            onSubmit={(values, {setSubmitting, resetForm}) => {handleSubmit(values, setSubmitting, resetForm)}}
-        >
-            {({
-              values,
-              errors,
-              touched,
-              handleChange,
-              handleBlur,
-              handleSubmit,
-              isSubmitting
-            }) => (
-                <Form onSubmit={handleSubmit}>
-                    <div className='input-row'>
-                        <label htmlFor='email'>E-mail</label>
-                        <input
-                            type='email'
-                            name='email'
-                            id='email'
-                            placeholder='email@email.com'
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            value={values.email}
-                        />
-                        {errors.email && touched.email && <div>{errors.email}</div>}
-                    </div>
+    <div className='login-div'>
+            <Formik
+                initialValues={{email: '', password: ''}}
+                validationSchema={validationSchema}
+                onSubmit={(values, {setSubmitting, resetForm}) => {handleSubmit(values, setSubmitting, resetForm)}}
+            >
+                {({
+                      values,
+                      errors,
+                      touched,
+                      handleChange,
+                      handleBlur,
+                      handleSubmit,
+                      isSubmitting
+                  }) => (
+                    <Form onSubmit={handleSubmit}>
+                        <div className='row'>
+                            <div className='row center-align'>
+                                <h5>Sign in</h5>
+                            </div>
+                        </div>
 
-                    <div className='input-row'>
-                        <label htmlFor='password'>Password</label>
-                        <input
-                            type='password'
-                            name='password'
-                            id='password'
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            value={values.password}
-                        />
-                        {errors.password && touched.password && <div>{errors.password}</div>}
-                    </div>
+                        <div className='row'>
+                            <div className='input-field col s12'>
+                                <label for='email'>E-mail</label>
+                                <input
+                                    className='validate'
+                                    type='email'
+                                    name='email'
+                                    id='email'
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.email}
+                                />
+                                {errors.email && touched.email && <div>{errors.email}</div>}
+                            </div>
+                        </div>
 
-                    <div className='input-row'>
-                        <button type='submit' disabled={isSubmitting}>Submit</button>
-                    </div>
-                </Form>
-            )}
-        </Formik>
+                        <div className='row'>
+                            <div className='input-field col s12'>
+                                <label htmlFor='password'>Password</label>
+                                <input
+                                    className='validate'
+                                    type='password'
+                                    name='password'
+                                    id='password'
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.password}
+                                />
+                                <div><a href='#'><b>Forgot password?</b></a></div>
+                                {errors.password && touched.password && <div>{errors.password}</div>}
+                            </div>
+                        </div>
+
+                        <div className='row'></div>
+                        <div className='row'>
+                            <div className='col s6'><a href='#'>Create account</a></div>
+                            <div className='col s6 right-align'>
+                                <button
+                                    className="waves-effect waves-light btn btn-primary"
+                                    type="submit"
+                                    disabled={isSubmitting}>Login
+                                </button>
+                            </div>
+                        </div>
+                    </Form>
+                )}
+            </Formik>
     </div>
 );
 
