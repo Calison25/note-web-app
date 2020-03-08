@@ -1,0 +1,10 @@
+version: '2'
+services:
+  notes_webapp:
+    build: .
+    container_name: 'notes_webapp'
+    ports:
+      - '5000:3000'
+    volumes:
+      - ./:/usr/src/notes_webapp
+      - /usr/src/notes_webapp/node_modules
