@@ -66,7 +66,7 @@ export const Register = () => (
 
                     <div className='row'>
                         <div className='input-field col s12'>
-                            <label for='email'>E-mail</label>
+                            <label htmlFor='email'>E-mail</label>
                             <input
                                 className='validate'
                                 type='email'
