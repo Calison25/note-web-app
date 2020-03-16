@@ -9,7 +9,7 @@
     background-color: #1a73e8;
 }
 
-.btn-primary {
+.btn-primary{
     background-color: #1a73e8;
 }
 
@@ -42,4 +42,52 @@ textarea:focus.no-textarea-focus {
 
 .create-card {
     width: 600px;
+}
+
+a.modal-button {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover.background-modal-button {
+    color: #000000;
+    background-color: rgba(95, 99, 104, 0.039);
+    text-decoration: none;
+}
+
+.modal {
+    max-height: 100%;
+    overflow: visible;
+    background-color: unset;
+    position: fixed;
+}
+
+.modal-content {
+    max-width: 600px;
+    height: 240px;
+}
+
+.modal-header.no-modal-header-border {
+    border-bottom: none;
+}
+
+.modal-footer.custom-modal-footer {
+    background-color: unset;
+    border-top: none
+}
+
+.modal-icons {
+    color: #202124;
+    font-size: 19px;
+}
+
+.icons-space {
+    padding-right: 20px;
+}
+
+a:hover.icons-modal {
+    opacity: .87;
+    background-color: rgba(95, 99, 104, 0.157);
+    border: 2px solid #ddd;
+    border-radius: 50%;
 }
